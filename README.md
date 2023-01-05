@@ -2,7 +2,8 @@
 
 ###### tags: `gcm`
 
-A basic study about GCM mode in AES encryption.
+A basic understand about GCM mode (Galois Counter Mode) in AES encryption.
+
 
 #### Key notes
 Advanced Encryption Standard (AES) is a fast, secure and very popular block cipher that is commonly used to encrypt electronic data. AES has three different block ciphers: AES-128 (128 bit), AES-192 (192 bit) and AES-256 (256 bit) - each cipher is named after the key length they use for encryption and decryption.
@@ -11,7 +12,11 @@ AES supports many different "modes". Modes are the internal algorithm used to en
 
 GCM is a mode of AES that uses the CTR (counter) mode to encrypt data and uses Galois mode for authentication. Aside from the CTR mode which is used to encrypt the data, Galois mode authentication allows us to check at the end of decryption that the message has not been tampered with. GCM is well known for its speed and that it's a mode that it's patent-free.
 
+Galois/Counter Mode (GCM) is a mode of operation for symmetric-key cryptographic block ciphers which is widely adopted for its performance.
+
 CTR mode turns a block cipher into a stream cipher. It generates the next keystream block by encrypting successive values of a "counter". The counter can be any function which produces a sequence which is guaranteed not to repeat for a long time, although an actual increment-by-one counter is the simplest and most popular.
+
+Nonce is used by authentication protocols to ensure that old communications cannot be reprocessed. Hashing. Proof of work systems use nonce values to vary input to a cryptographic hash function. This helps fulfill arbitrary conditions and provide a desired difficulty.
 
 #### Install
 ```
@@ -229,4 +234,8 @@ A rainbow table is a precomputed table for caching the output of cryptographic h
 #### Reference
 https://nitratine.net/blog/post/python-gcm-encryption-tutorial/  
 https://nitratine.net/blog/post/python-encryption-and-decryption-with-pycryptodome/  
+https://en.wikipedia.org/wiki/Galois/Counter_Mode  
 https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#Counter_(CTR)  
+https://asecuritysite.com/encryption/aes_gcm  
+https://github.com/wolf43/AES-GCM-example  
+https://www.techtarget.com/searchsecurity/definition/nonce  
